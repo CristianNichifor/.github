@@ -1,0 +1,4 @@
+# Repositories whose workflows commit to dev or main themselves (GITHUB_TOKEN pushes): the
+# GitHub Actions app may bypass the pull request rule there. open-procurement: publish-data.yml
+# commits each day's data, backfill.yml commits a backfill.
+open-procurement

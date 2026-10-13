@@ -1,0 +1,21 @@
+# Repositories that follow dev -> main: work lands on dev by pull request, dev is promoted to
+# main by pull request merged as a merge commit (a squash would rewrite dev's history on main
+# and make the next promotion conflict). Default branch: dev.
+# Not listed: .github (main only, rulesets/main-only.json), dotfiles and repo-template (private:
+# rulesets need GitHub Pro), iso-3166-2.json (a fork that tracks upstream master).
+administrative-reform-simulator
+bureaucracy-as-code
+civic-tech-hub
+civic-ui
+digital-public-administration-lab
+digital-romania-atlas
+Google-Contacts-Coda-Pack
+legislation-linter
+open-procurement
+public-pay-simulator
+romania-budget-dashboard
+romania-budget-dashboard-bff
+romania-intelligence-reform-dataflows
+romania-reforms
+tablou
+usr-digital-platform-wireframe
