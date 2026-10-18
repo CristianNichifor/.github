@@ -10,4 +10,4 @@ What concrete problem does this solve, and what changes for the user?
 
 ## Scope
 
-Link the issue and note compatibility, data provenance, generated files or deployment implications. Do not include credentials or personal data. The maintainer reviews and merges; agents never merge.
+Link the issue and note compatibility, data provenance, generated files or deployment implications. Do not include credentials or personal data. Target `dev` in deployed projects and `main` in configuration-only projects. Reviewed PRs into `dev` land by squash; only the account owner merges into `main`.
