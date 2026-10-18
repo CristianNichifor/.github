@@ -8,10 +8,10 @@ AI-assisted contributions are welcome. Contributors remain responsible for under
 
 ## Contribution workflow
 
-- Work from the remote default branch in a separate checkout. With the maintainer's `wt` tool, run `git fetch origin` then `wt new chore/<task> origin/<default-branch>`; it creates `<repo>/.worktrees/chore/<task>`. Contributors without `wt` can use a separate clone and feature branch. Never modify another task's working tree.
+- For a deployed project, start from `origin/dev` and target `dev` in the pull request. For a configuration-only project, start from `origin/main` and target `main`. The README or AGENTS file identifies the project type. Use a separate clone or worktree so existing work is not disturbed. Maintainers with `wt` can run `git fetch origin` and `wt new chore/<task> origin/<base>`.
 - Use Conventional Commits: imperative lower-case subject, at most 72 characters, no trailing full stop, one change per commit. Explain why in the body only when needed; link issues with `Refs: #N` or `Closes: #N`.
-- Open a PR against the repository’s default branch with the problem, resulting behavior, verification command/results and any limitations. Agents never merge PRs, push directly to protected branches, deploy, or publish releases.
-- A required check or administrator-only branch rule is not an agent permission boundary: administrator credentials can bypass rules. Keep publication credentials out of ordinary development.
+- Open a PR with the problem, resulting behavior, verification command/results and any limitations. Reviewed PRs into `dev` land by squash after required checks pass. Only the account owner merges a configuration repository PR into `main` or promotes deployed `dev` to `main`; production promotion is fast-forward only.
+- Keep publication credentials out of ordinary development. Do not push directly to protected branches or bypass their rules.
 - Tasks need an observable acceptance criterion, affected area, constraints and a verification command. Use synthetic fixtures; do not include credentials or personal data in issues, logs or tests.
 
 For UI changes, include screenshots of affected states. For data or calculation changes, include source provenance and a representative input/output example. Changes to generated files must include the source and regeneration command.
